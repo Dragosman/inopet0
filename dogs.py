@@ -13,12 +13,14 @@ class Dog:
         self.depar_ext_next = {"name":"", "date":""}
     
 
-    def setBasics(self,key, name, weight, breed, dob):
+    def setBasics(self,name, weight, breed, dob, key=""):
         self.name = name
         self.weight=weight
         self.breed=breed
         self.dob=dob
-        self.key = key
+        if key!="":
+            self.key = key
+
 
 
     def setVaccine(self,vaccine_last, vaccine_next):

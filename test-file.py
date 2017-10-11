@@ -90,16 +90,72 @@ def getAlerts():
 
 
 
-def setDog(key, dog):
+def addDog(dog):
+	dgs = db.child("dogs")
+
+
+	dog_json = {
+		"DOB":dog.dob,
+		"name":dog.name,
+		"diet":{},
+		"external_depar":[dog.depar_ext_last, dog.depar_ext_next],
+		"internal_depar":[dog.depar_int_last, dog.depar_int_next],
+		"weight":dog.weight,
+		"vaccines":[dog.vaccine_last, dog.vaccine_next],
+		"breed":dog.breed,
+		"reproduction":{}
+	}
+
+
+
+
+	dgs.push(dog_json)
+	# to modify when we have multiple users, to have dog per owner
+	return dog_json
+
+def addFood(food):
+	fds = db.child("food")
+
+	food_json = {
+		"company": food.company,
+		"name": food.name,
+		"type": food.type,
+		"quantity": food.quantity,
+		"guide":{"error":"","quants":[]}
+
+	}
+
+
+	fds.push(food_json)
+	# to modify when we have multiple users, to have food per owner
+	return food
+
+
+def addAlert(alert):
+	alrts = db.child("alerts")
+
+	alert_json = {
+		"name":alert.name,
+		"description":alert.description,
+		"type": alert.type,
+		"first":alert.first,
+		"second":alert.second
+	}
+
+	alrts.push(alert_json)
+
+def updateDog(key, dog):
 	# set dog value with ID 
 	pass
-def setFood(key, food):
+def updateFood(key, food):
 	# set food value with ID
 	pass
 
-def setAlert(key, alert):
+def updateAlert(key, alert):
 	# set alert value with ID
 	pass
+
+'''
 
 a=getFood()
 
@@ -107,3 +163,90 @@ print (a[0].name)
 print (a[0].type)
 print (a[0].quantity)
 print (a[0].company)
+'''
+
+'''
+testing the add functions
+
+'''
+# test dog
+dog_test = dogs.Dog()
+dog_test.setBasics("Test-dog","30","GermanDog Arlechin","12/12/2016")
+vaccine1_last = {"date":"12/01/2017", "name":"blabla"}
+vaccine1_next = {"date":"12/09/2017", "name":"next"}
+
+dog_test.setVaccine(vaccine1_last, vaccine1_next)
+
+depint1_last = {"date":"12/04/2017", "name":"blabla"}
+depint1_next = {"date":"12/07/2017", "name":"next"}
+
+depext1_last = {"date":"12/09/2017", "name":"blabla"}
+depext1_next = {"date":"12/10/2017", "name":"next"}
+
+dog_test.setDeparInt(depint1_last, depint1_next)
+dog_test.setDeparExt(depext1_last, depext1_next)
+#addDog(dog_test)
+
+
+
+# test food
+
+food_test = food.Food()
+food_test.setBasics("test-company", "zqa", "dry","15000")
+food_test.setGuide("",[])
+#addFood(food_test)
+
+
+
+# test alert
+
+alert_test = alerts.Alert()
+first={"date":"12/10/2017","status":"not sent"}
+second = {"date":"19/10/2017","status":"not sent"}
+alert_test.setBasics("alert_test","mancare", first , second, "Catelul de test va ramane fara mancare. Pls help!")
+addAlert(alert_test)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

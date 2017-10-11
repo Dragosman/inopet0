@@ -10,12 +10,14 @@ class Food:
 		self.quantity=""
 		self.guide={"error":"", "quants":[]}
 		
-	def setBasics(self, key, company, name, tp, quantity):
-		self.key=key
+	def setBasics(self, company, name, tp, quantity, key=""):
+
 		self.company=company
 		self.name=name
 		self.type=tp
 		self.quantity=quantity
+		if key!="":
+			self.key=key
 
 	def setGuide(self, error, quants):
 		self.guide["error"]=error

@@ -12,13 +12,15 @@ class Alert:
 	def getBasics():
 		return(self.name, self.type, self.first, self.second)
  
-	def setBasics(self, key, name, typ, first, second, description):
+	def setBasics(self, name, typ, first, second, description, key=""):
 		self.key = key
 		self.name=name
 		self.type=typ
 		self.first=first
 		self.second=second
 		self.description = description
+		if key!="":
+			self.key=key		
 
 class Alerts:
 	def __init__(self):
