@@ -1,8 +1,9 @@
 class Dog:
     def __init__(self):
+        self.key = ""
         self.name = ""
         self.weight=""
-        self.type=""
+        self.breed=""
         self.dob=""
         self.vaccine_last = {"name":"", "date":""}
         self.vaccine_next = {"name":"", "date":""}
@@ -12,11 +13,12 @@ class Dog:
         self.depar_ext_next = {"name":"", "date":""}
     
 
-    def setBasics(self,name, weight, typ, dob):
-    	self.name = name
-    	self.weight=weight
-    	self.type=typ
-    	self.dob=dob
+    def setBasics(self,key, name, weight, breed, dob):
+        self.name = name
+        self.weight=weight
+        self.breed=breed
+        self.dob=dob
+        self.key = key
 
 
     def setVaccine(self,vaccine_last, vaccine_next):

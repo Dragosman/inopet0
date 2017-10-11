@@ -3,13 +3,15 @@ date_format = "%d/%m/%Y"
 
 class Food:
 	def __init__(self):
+		self.key=""
 		self.company=""
 		self.name=""
 		self.type=""
 		self.quantity=""
 		self.guide={"error":"", "quants":[]}
 		
-	def setBasics(self,company, name, tp, quantity):
+	def setBasics(self, key, company, name, tp, quantity):
+		self.key=key
 		self.company=company
 		self.name=name
 		self.type=tp
@@ -45,6 +47,17 @@ def add_days(initial_date="NOW", days=30):
 		return end_date1.strftime(date_format)
 
 
+def retract_days(initial_date="NOW", days="10"):
+	if initial_date=="NOW":
+		b = dt.datetime.today().strftime("%d/%m/%Y")
+		b = dt.datetime.strptime(b,date_format)
+		end_date = b - dt.timedelta(days)
+		return end_date.strftime(date_format)
+	else:
+		date_1 = dt.datetime.strptime(initial_date, date_format)
+		end_date = date_1 - dt.timedelta(days)
+		end_date1 = dt.datetime.strftime(end_date, date_format)
+		return end_date1
 
 
 #-------

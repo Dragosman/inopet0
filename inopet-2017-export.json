@@ -1,0 +1,121 @@
+{
+  "dogs" : [ {
+    "name":"Isi",
+    "DOB" : "23/11/2015",
+    "breed" : "Metis",
+    "diet" : [ {
+      "estimated_duration" : "",
+      "food_name" : "",
+      "started_date" : ""
+    } ],
+    "external_depar" : [ {
+      "date" : "04/09/2017",
+      "name" : "Frontline Combo"
+    },{
+      "date" : "04/10/2017",
+      "name" : "NEXT"}],
+    "internal_depar" : [ {
+      "date" : "04/07/2017",
+      "name" : "Cestal Plus"
+    },{
+      "date" : "10/11/2017",
+      "name" : "NEXT"
+    }],
+    "reproduction" : [ {
+      "date" : "05/2016",
+      "type" : "Castrare"
+    } ],
+    "vaccines" : [ {
+      "date" : "31/03/2017",
+      "name" : "Nobivac DHPPi"
+    }, {
+      "date" : "31/03/2018",
+      "name" : "NEXT"
+    } ],
+    "weight" : "5"
+  },
+    {
+    "name":"Ino",  
+    "DOB" : "19/07/2014",
+    "breed" : "German Shepherd",
+    "diet" : [ {
+      "estimated_duration" : "5",
+      "company_food" : "Hills ",
+      "name":"ZD",
+      "started_date" : "15/07/2017"
+    } ],
+    "external_depar" : [ {
+      "date" : "04/09/2017",
+      "name" : "Frontline Combo"
+    },
+    {
+      "date" : "04/10/2017",
+      "name" : "NEXT"
+    }
+  ],
+    "internal_depar" : [ 
+    {
+      "date" : "25/07/2017",
+      "name" : "Cestapol Plus"
+    },
+    {
+      "date" : "05/10/2017",
+      "name" : "NEXT"
+    }
+
+     ],
+    "reproduction" : [ {
+      "date" : "",
+      "type" : ""
+    } ],
+    "vaccines" : [{
+      "date" : "10/05/2016",
+      "name" : "Biocan DHPPi/L4R"
+    }, {
+      "date" : "10/11/2017",
+      "name" : "NEXT"
+    } ],
+    "weight" : "35"
+  } ],
+  "food" : [ {
+    "company" : "Hills",
+    "error" : "0.2",
+    "guide" : [ {
+      "2,5" : "70"
+    }, {
+      "5" : "120"
+    }, {
+      "10" : "200"
+    }, {
+      "20" : "340"
+    }, {
+      "30" : "460"
+    }, {
+      "40" : "570"
+    } ],
+    "name" : "ZD",
+    "type" : "dry",
+    "quantity":"16000"
+   
+  }, 
+    {
+    "company" : "Hills",
+    "guide" : [ {
+      "all" : "180"
+    } ],
+    "name" : "ZD",
+    "type" : "can",
+    "quantity":"1080"
+  } ],
+
+  "alerts": [
+    {"name":"Alerta Mancare Uscata/La sac", "type":"Mancare", "first":{"date":"17/10/2017", "status":"not sent"},"second":{"date":"26/10/2017", "status":"not sent"}, "description":"Mancarea la sac expira in curand. Te rog sa ai grija si sa comanzi un sac nou!"},
+    {"name":"Alerta Mancarea la Conserva", "type":"Mancare", "first":{"date":"10/10/2017", "status":"not sent"},"second":{"date":"19/10/2017", "status":"not sent"}, "description":"Mancarea la cutie expira in curand. Te rog sa ai grija si sa comanzi conserve noi!"},
+    {"name":"Alerta Vaccin", "type":"Vaccin", "first":{"date":"31/10/2017", "status":"not sent"},"second":{"date":"08/11/2017", "status":"not sent"}, "description":"Urmatorul vaccin pentru Ino este pe 10/11/2017"},
+    {"name":"Alerta Vaccin", "type":"Vaccin", "first":{"date":"21/03/2018", "status":"not sent"},"second":{"date":"30/03/2018", "status":"not sent"}, "description":"Urmatorul vaccin pentru Isi este pe 31/03/2018"},
+    {"name":"Alerta Deparazitare Interna", "type":"Depar_Interna", "first":{"date":"25/12/2017", "status":"not sent"},"second":{"date":"04/01/2018", "status":"not sent"}, "description":"Urmatoarea deparazitare interna pentru Ino este pe 05/01/2018"},
+    {"name":"Alerta Deparazitare Interna", "type":"Depar_Interna", "first":{"date":"31/10/2017", "status":"not sent"},"second":{"date":"09/11/2017", "status":"not sent"}, "description":"Urmatoarea deparazitare interna pentru Isi este pe 10/11/2017"},
+    {"name":"Alerta Deparazitare Externa", "type":"Depar_Externa", "first":{"date":"24/10/2017", "status":"not sent"},"second":{"date":"03/11/2017", "status":"not sent"}, "description":"Urmatoarea deparazitare externa pentru Ino este pe 04/11/2017"},
+    {"name":"Alerta Deparazitare Externa", "type":"Depar_Externa", "first":{"date":"24/10/2017", "status":"not sent"},"second":{"date":"03/11/2017", "status":"not sent"}, "description":"Urmatoarea deparazitare externa pentru Isi este pe 04/11/2017"}
+      ]
+}
